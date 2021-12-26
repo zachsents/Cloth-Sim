@@ -48,7 +48,7 @@ export function setup(nodes, links) {
 export function draw(nodes, links) {
     for(let node of nodes) {
         let nodeDiv = document.getElementById(node.id)
-        nodeDiv.style.transform = `translate(${node.pos.x() * SCALE}px,${node.pos.y() * SCALE}px)`
+        nodeDiv.style.transform = `translate(${round(node.pos.x() * SCALE, 1)}px,${round(node.pos.y() * SCALE, 1)}px)`
     }
 
     for(let link of links)
